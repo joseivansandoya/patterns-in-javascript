@@ -1,10 +1,10 @@
-###### Design Patterns
+###### Design Patterns Family
 
 # Creational patterns
 Creational patterns defines a way to instantiate a single object or a group of ones
 
 ## Singleton
-[View code](https://github.com/joseivansandoya/software-fundamentals-js/blob/master/patterns/design-patterns/creational/singleton.js)
+[View code](https://github.com/joseivansandoya/patterns-in-javascript/blob/master/design-patterns/creational/singleton.js)
 
 The singleton pattern is used to ensure that only one instance of a class is created. 
 All further references to objects of the singleton class refer to the same underlying instance.
@@ -21,7 +21,7 @@ The main goal of the singleton pattern is to keep control of the object creation
 
 
 ## Factory method
-[View code](https://github.com/joseivansandoya/software-fundamentals-js/blob/master/patterns/design-patterns/creational/factory-method.js)
+[View code](https://github.com/joseivansandoya/patterns-in-javascript/blob/master/design-patterns/creational/factory-method.js)
 
 The factory method pattern help you instantiate and object that later will take the shape of a specific class. The factory pattern wraps a constructor for different types of objects and returns instances of the objects via a simple API. It makes it easy to create different objects by exposing a simple API that return the specified object type.
 #### Key features
