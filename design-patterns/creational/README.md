@@ -20,7 +20,6 @@ The main goal of the singleton pattern is to keep control of the object creation
 - Socket connections
 
 
-
 ## Factory Method
 [View code](https://github.com/joseivansandoya/patterns-in-javascript/blob/master/design-patterns/creational/factory-method.js)
 
@@ -35,7 +34,6 @@ The factory method pattern helps you instantiate and object that later will take
 - When a class cannot anticipate the type of objects it needs to create beforehand
 
 
-
 ## Abstract Factory
 [View code](https://github.com/joseivansandoya/patterns-in-javascript/blob/master/design-patterns/creational/abstract-factory.js)
 
@@ -48,5 +46,5 @@ This pattern has well defined elements that become its key features:
 - **Abstract Factory**: Is an interface for creating families of related or dependent objects without specifying their concrete classes. Example: *DairyFactory*
 #### When to use it?
 - When you want to create a collection of related products that are designed to be used together
-- When you want our system to have independence between the creation, composition and representation of its products
-- When you want to hide the implementations of our products, only revealing the required interface to provide access to their use
+- When you want your system to have independence between the creation, composition and representation of its products
+- When you want to hide the implementations of your products, only revealing the required interface to provide access to their use
