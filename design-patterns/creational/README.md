@@ -20,6 +20,7 @@ The main goal of the singleton pattern is to keep control of the object creation
 - Socket connections
 
 
+
 ## Factory Method
 [View code](https://github.com/joseivansandoya/patterns-in-javascript/blob/master/design-patterns/creational/factory-method.js)
 
@@ -34,10 +35,11 @@ The factory method pattern helps you instantiate and object that later will take
 - When a class cannot anticipate the type of objects it needs to create beforehand
 
 
+
 ## Abstract Factory
 [View code](https://github.com/joseivansandoya/patterns-in-javascript/blob/master/design-patterns/creational/abstract-factory.js)
 
-The abstract factory allows us to create families of related products to be used together within their implementation. The main rule is that an abstract factory have to provide an interface to create a family of objects.
+The abstract factory allows you to create families of related products to be used together within their implementation. The main rule is that an abstract factory have to provide an interface to create a family of objects.
 #### Key features
 This pattern has well defined elements that become its key features:
 - **Product**: It is an object built by a factory and it is included in a family of objects. It is very specific as there is no abstraction to it. Example: *NestleMilk*, *LactalisMilk*

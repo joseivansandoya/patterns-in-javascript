@@ -35,7 +35,7 @@ const LactalisCheese = function(qty) {
 }
 
 /** Abstract Factory: for this example our abstract factory is a Dairy one. Specific manufacturers
- * (Nestle and Lactalis) will after extend the produce milk and produce cheese methods
+ * (Nestle and Lactalis) will after extend the produceMilk and produceCheese methods
  */
 const DairyFactory = function() {
   this.produceMilk = () => {}
