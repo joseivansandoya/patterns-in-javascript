@@ -23,7 +23,7 @@ The main goal of the singleton pattern is to keep control of the object creation
 ## Factory Method
 [View code](https://github.com/joseivansandoya/patterns-in-javascript/blob/master/design-patterns/creational/factory-method.js)
 
-The factory method pattern help you instantiate and object that later will take the shape of a specific class. The factory pattern wraps a constructor for different types of objects and returns instances of the objects via a simple API. It makes it easy to create different objects by exposing a simple API that return the specified object type.
+The factory method pattern helps you instantiate and object that later will take the shape of a specific class. The factory pattern wraps a constructor for different types of objects and returns instances of the objects via a simple API. It makes it easy to create different objects by exposing a simple API that return the specified object type.
 #### Key features
 - It strongly relies on inheritance, as object creation is delegated to subclasses that implement the factory method to create objects
 - The final shape of the object created can be implemented in a child class
@@ -35,7 +35,16 @@ The factory method pattern help you instantiate and object that later will take 
 
 
 ## Abstract Factory
-View code
+[View code](https://github.com/joseivansandoya/patterns-in-javascript/blob/master/design-patterns/creational/abstract-factory.js)
 
+The abstract factory allows us to create families of related products to be used together within their implementation. The main rule is that an abstract factory have to provide an interface to create a family of objects.
 #### Key features
+This pattern has well defined elements that become its key features:
+- **Product**: It is an object built by a factory and it is included in a family of objects. It is very specific as there is no abstraction to it. Example: *NestleMilk*, *LactalisMilk*
+- **Abstract Product**: It is a higher level view of a product which defines its family. Example: *Milk*, *Cheese*
+- **Concrete Factory**: It is a factory that is “physically” micro-managing the creation and completion of a product. Example: *NestleFactory*, *LactalisFactory*
+- **Abstract Factory**: Is an interface for creating families of related or dependent objects without specifying their concrete classes. Example: *DairyFactory*
 #### When to use it?
+- When you want to create a collection of related products that are designed to be used together
+- When you want our system to have independence between the creation, composition and representation of its products
+- When you want to hide the implementations of our products, only revealing the required interface to provide access to their use
