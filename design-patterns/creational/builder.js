@@ -1,6 +1,6 @@
 // Builder implementation
 
-// manufacturer, type (helicopter, plane), usage (militar, commercial), destroy_capacity, people_capacity, payload_capacity
+/** Main class: this is the class definition for the object that will be instantiated in the builder class */
 const Aircraft = function(manufacturer, type, usage, destruction_capacity, passenger_capacity, load_capacity) {
   this.manufacturer = manufacturer;
   this.type = type;
@@ -10,6 +10,11 @@ const Aircraft = function(manufacturer, type, usage, destruction_capacity, passe
   this.load_capacity = load_capacity;
 }
 
+/** Builder: this class will define methods for initializing the different main class constructor
+ * arguments. Each definer method will return the self builder instance.
+ * The builder ends with a 'build' function which will finally initialize the main class and 
+ * return it.
+ */
 const AircraftBuilder = function() {
   let aircraft_manufacturer;
   let aircraft_type;
@@ -19,6 +24,7 @@ const AircraftBuilder = function() {
   let aircraft_load_capacity;
 
   this.setManufacturer = manufacturer => {
+    // You can validate that the builder recieves all critical initial arguments
     if (!manufacturer) {
       throw new Error('setManufacturer() expects to recieve a string parameter');
     }
@@ -49,6 +55,7 @@ const AircraftBuilder = function() {
     return this;
   }
   this.buid = () => {
+    // You can validate that the builder calls all critical methods before returning main class instance
     if (!aircraft_manufacturer) {
       throw new Error('The aircraft must have a manufacturer defined. Use the setManufacturer() method.');
     }
@@ -59,6 +66,9 @@ const AircraftBuilder = function() {
   }
 }
 
+/** Now you use the builder by instantiating it and calling initiator methods (with their corresponding
+ * arguments) you may want. Notice that some methods may be mandatory to be excecuted after calling
+ * the final build function */
 const oh58 = new AircraftBuilder()
               .setManufacturer('Bell')
               .setType('helicopter')
@@ -89,6 +99,7 @@ console.log('\n');
 console.log('>> dreamlifter', dreamlifter);
 console.log('\n');
 
+// These are intentionally written failed builder initializations
 try {
   const error_case_1 = new AircraftBuilder()
               .setManufacturer('Boeing')
