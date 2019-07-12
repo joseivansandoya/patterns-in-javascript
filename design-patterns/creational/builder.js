@@ -10,8 +10,8 @@ const Aircraft = function(manufacturer, type, usage, destruction_capacity, passe
   this.load_capacity = load_capacity;
 }
 
-/** Builder: this class will define methods for initializing the different main class constructor
- * arguments. Each definer method will return the self builder instance.
+/** Builder: this class will define methods for initializing the different argumetns of the main class constructor. 
+ * Each definer method will return the self builder instance. 
  * The builder ends with a 'build' function which will finally initialize the main class and 
  * return it.
  */

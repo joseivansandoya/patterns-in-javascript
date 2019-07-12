@@ -53,10 +53,11 @@ This pattern has well defined elements that become its key features:
 ## Builder
 [View code](https://github.com/joseivansandoya/patterns-in-javascript/blob/master/design-patterns/creational/builder.js)
 
-The factory method pattern helps you instantiate and object that later will take the shape of a specific class. The factory pattern wraps a constructor for different types of objects and returns instances of the objects via a simple API. It makes it easy to create different objects by exposing a simple API that return the specified object type.
+The Builder pattern exists in order to improve the readability and maintainability of an object instantiation. This pattern avoids the problem of having to pass to many arguments to an object constructor. Instead of that, the pattern allows you to define and use methods that will initialize those arguments. You can code additional validations for every argument if necessary.
 #### Key features
-- It strongly relies on inheritance, as object creation is delegated to subclasses that implement the factory method to create objects
-- The final shape of the object created can be implemented in a child class
-- The final shape of the object created can be implemented in a base class and optionally overridden by derived classes
+- It separates the complexities of the creation logic from the final representation
+- It is completely usefull in the Object Oriented Paradigm
+- The main class delegates object creation to a Builder object instead of creating the objects directly
 #### When to use it?
-- When you want to avoid the complex process of instantiating an object
+- When you want to have more control over the arguments
+- When you need to implement partial object creation (Object creation with some arguments)
