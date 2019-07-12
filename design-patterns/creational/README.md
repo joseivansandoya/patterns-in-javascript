@@ -53,7 +53,7 @@ This pattern has well defined elements that become its key features:
 ## Builder
 [View code](https://github.com/joseivansandoya/patterns-in-javascript/blob/master/design-patterns/creational/builder.js)
 
-The Builder pattern exists in order to improve the readability and maintainability of an object instantiation. This pattern avoids the problem of having to pass to many arguments to an object constructor. Instead of that, the pattern allows you to define and use methods that will initialize those arguments. You can code additional validations for every argument if necessary.
+The Builder pattern exists in order to improve the readability and maintainability of an object instantiation. This pattern avoids the problem of having to pass too many arguments to an object constructor. Instead of that, the pattern allows you to define and use methods that will initialize those arguments. You can code additional validations for every argument if necessary.
 #### Key features
 - It separates the complexities of the creation logic from the final representation
 - It is completely usefull in the Object Oriented Paradigm
