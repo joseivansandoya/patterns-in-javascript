@@ -1,6 +1,11 @@
 // Adapter implementation
 
-/** Adaptee classes: */
+/** Adaptee classes: these can be already defined classes that need to be used for one client that
+ * has an incompatible interface.
+ * For this example the adaptee classes will be different credit card providers (Visa, MasterCard and
+ * American Express), each of them can have their propper attributes and methods and don't necessaryly
+ * need to be equal between all of them
+*/
 const Visa = function() {
   this.intlName = 'VISA';
   this.getIntlName = () => this.intlName;
@@ -60,7 +65,9 @@ const AmEx = function() {
   }
 }
 
-/** Adapter */
+/** Adapter: this class converts the (incompatible) interface of a class (adaptee) into another 
+ * interface (target) clients require
+ * */
 const CreditCardAdapter = function (CreditCard) {
   if (!CreditCard) {
     throw new Error('No credit card has been provided');
@@ -68,6 +75,10 @@ const CreditCardAdapter = function (CreditCard) {
   const credit_card_name = CreditCard.getIntlName();
   let log = [];
 
+  /** This class will implement adapter methods that can be used for clients. The responsibility of
+   * this class is to validate which adaptee class it is interacting to and to call the corresponding
+   * methods of those adaptee classes
+   */
   this.validate_credit_card = () => {
     if (credit_card_name === 'VISA') {
       log.push(CreditCard.validate_data());
@@ -106,7 +117,10 @@ const CreditCardAdapter = function (CreditCard) {
   }
 }
 
-/** Client */
+/** Client: this one can be another class or simple process that is imcompatible in the way of
+ * operation with the adaptee classes. Client will make use of the target interface (the one generated
+ * by the adapter class) in order to operate with the adaptee ones
+ */
 
 // One of: Visa / MasterCard / AmEx
 const creditCardInstance = new MasterCard();
