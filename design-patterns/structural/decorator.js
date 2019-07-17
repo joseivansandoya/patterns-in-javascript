@@ -1,6 +1,6 @@
 // Decorator implementation
 
-/** Base class */
+/** Base class: this can be an already defined class. This class will be decorated */
 const Coffee = function(ingredients, price) {
   this.ingredients = ingredients || 'coffee';
   this.price = price || 1;
@@ -9,7 +9,10 @@ const Coffee = function(ingredients, price) {
   this.printInfo = () => `${this.getIngredients()} // $${this.getPrice()}`;
 }
 
-/** Decorators */
+/** Decorators: these classes will extend from the base class and will add new functionalities without altering it. The goal
+ * is to keep a reference to that base class.
+ * Decorators can add or alter behaviour before or after the excecution of base methods.
+ */
 const WithMilk = function(coffee) {
   Coffee.call(this);
   // override base methods
@@ -24,7 +27,8 @@ const WithCream = function(coffee) {
   this.getPrice = () => coffee.getPrice() + 0.25;
 }
 
-// single implementation of base class
+/** Client */
+// single instantiation of base class
 const plain_coffee = new Coffee();
 
 // usage of decorators from single implementation
