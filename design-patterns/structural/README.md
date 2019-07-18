@@ -30,17 +30,18 @@ The decorator pattern is used to extend or alter the functionality of objects at
 ## Facade
 [View code](https://github.com/joseivansandoya/patterns-in-javascript/blob/master/design-patterns/structural/facade.js)
 
-The decorator pattern is used to extend or alter the functionality of objects at run-time by wrapping them in an object of a decorator class. This provides a flexible alternative to using inheritance to modify behavior but without affecting nor the base class neither its already created instances.
+The facade pattern is used to define a simplified interface to a more complex subsystem.
+It helps to improve the readability and usability of a software library by masking interaction with more complex components behind a single (and often simplified) API.
 #### Key features
-- Decorator implements the interface of the extended (decorated) object transparently by forwarding all requests to it
-- It perform additional functionality before/after forwarding a request
+- It implements a simple interface in terms of (by delegating to) the interfaces in the subsystem
+- It may perform additional functionality before/after forwarding a request
 #### When to use it?
-- When responsibilities should be added to (and removed from) an object dynamically at run-time
-- When a flexible alternative to subclassing for extending functionality should be provided
+- When you have to make a complex subsystem easier to use, a simple interface should be provided for a set of interfaces in the subsystem
+- When the dependencies on a subsystem should be minimized
 
 
 
-### Structural patterns sumary
+## Structural patterns differences
 - **Adapter:** Converts one interface to another so that it matches what the client is expecting
 - **Decorator:** Dynamically adds responsibility to the interface by wrapping the original code
 - **Facade:** Provides a simplified interface
