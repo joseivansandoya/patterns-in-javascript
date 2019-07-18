@@ -1,6 +1,6 @@
 // Facade implementation
 
-/** A complex system that can be compound by several classes with relations or inheritances between
+/** A complex system that can be compound of several classes with relations or inheritances between
  * them.
  * Some classes may be visible while some other my be protected or with ilegal access.
  */
@@ -25,6 +25,7 @@ const Memory = function () {
  * This class can additionally implement its own logic while interacting with the complex interfaces.
 */
 const ComputerFacade = function() {
+  // request all instances the facade will interact to
   const cpu_instance = new Cpu();
   const hard_drive_instance = new HardDrive();
   const memory_instance = new Memory();
