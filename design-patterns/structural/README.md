@@ -1,7 +1,7 @@
 ###### Design Patterns Family
 
 # Structural patterns
-Structural patterns provide a manner to define relationships between classes or objects
+Structural patterns provide a manner to define relationships between classes or objects, making it easier for these entities to work together.
 
 ## Adapter
 [View code](https://github.com/joseivansandoya/patterns-in-javascript/blob/master/design-patterns/structural/adapter.js)
