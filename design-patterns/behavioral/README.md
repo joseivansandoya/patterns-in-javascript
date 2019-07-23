@@ -46,3 +46,18 @@ This pattern has well defined elements that become its key features:
 #### When to use it?
 - When it is necessary to define a separate (mediator) object that encapsulates the interaction between a set of objects
 - When Objects need to delegate their interaction to a mediator object instead of interacting with each other directly
+
+
+## Chain of Responsibility
+[View code](https://github.com/joseivansandoya/patterns-in-javascript/blob/master/design-patterns/behavioral/chain-of-responsibility.js)
+
+The essence of the Mediator Pattern is to "define an object that encapsulates how a set of objects interact". It promotes loose coupling by keeping objects from referring to each other explicitly, and it allows their interaction to be varied independently. Client classes can use the mediator to send messages to other clients, and can receive messages from other clients via an event on the mediator class.
+#### Key features
+This pattern has well defined elements that become its key features:
+- **Mediator:** defines the interface for communication between Colleague objects
+- **ConcreteMediator:** implements the Mediator interface and coordinates communication between Colleague objects. It is aware of all of the Colleagues and their purposes with regards to inter-communication.
+- **Colleague:** defines the interface for communication with other Colleagues through its Mediator
+- **ConcreteColleague:** implements the Colleague interface and communicates with other Colleagues through its Mediator
+#### When to use it?
+- When it is necessary to define a separate (mediator) object that encapsulates the interaction between a set of objects
+- When Objects need to delegate their interaction to a mediator object instead of interacting with each other directly
