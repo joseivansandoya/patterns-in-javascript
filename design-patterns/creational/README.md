@@ -61,3 +61,16 @@ The Builder pattern exists in order to improve the readability and maintainabili
 #### When to use it?
 - When you want to have more control over the arguments
 - When you need to implement partial object creation (Object creation with some arguments)
+
+
+## Dependency injection
+[View code](https://github.com/joseivansandoya/patterns-in-javascript/blob/master/design-patterns/creational/dependency-injection.js)
+
+The Builder pattern exists in order to improve the readability and maintainability of an object instantiation. This pattern avoids the problem of having to pass too many arguments to an object constructor. Instead of that, the pattern allows you to define and use methods that will initialize those arguments. You can code additional validations for every argument if necessary.
+#### Key features
+- It separates the complexities of the creation logic from the final representation
+- It is completely usefull in the Object Oriented Paradigm
+- The main class delegates object creation to a Builder object instead of creating the objects directly
+#### When to use it?
+- When you want to have more control over the arguments
+- When you need to implement partial object creation (Object creation with some arguments)
