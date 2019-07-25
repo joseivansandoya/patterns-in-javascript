@@ -14,7 +14,7 @@ const Printer = function (serie) {
  * If no dependency provided then an error may occur.
  * 
  * IoC (Inversion of Control): note that thanks to the inversion of control pattern this client
- * class doesn't have to initialize its dependencys. Instead of that, the dependency will be
+ * class doesn't have to initialize its dependencies. Instead of that, the dependency will be
  * provided to the client whenever it is needed.
 */
 const TextEditor = function () {
