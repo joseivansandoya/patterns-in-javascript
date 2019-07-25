@@ -34,6 +34,7 @@ const TextEditor = function () {
 const l210 = new Printer('Epson L210');
 // Instantiate a new text editor
 const word = new TextEditor();
+// Here the (Printer) dependency is explicitly provided to the (TextEditor) client
 word.setPrinter(l210);
 word.printDocument();
 
