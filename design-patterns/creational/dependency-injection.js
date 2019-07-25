@@ -1,13 +1,18 @@
 // Dependency injection implementation
 
-/** Dependency: */
+/** Dependency: this can be any class defined or imported at some point of the program 
+ * execution. It can be an entyre program or just a simple method
+*/
 const Printer = function (serie) {
   this.serie = serie;
   this.print = () => console.log(`[${this.serie}] is now printing...`);
 }
 
 
-/** Client: */
+/** Client: this segment of the progam will use the dependency above declared or imported.
+ * It normally will require the usage of the dependency in order to complete it execution.
+ * If no dependency provided then an error may occur.
+*/
 const TextEditor = function () {
   this.printer = null;
   this.setPrinter = printer => this.printer = printer;
